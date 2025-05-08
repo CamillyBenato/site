@@ -8,20 +8,21 @@ body {
     background-attachment: fixed;
 }
 
-/***************************************************************************/
+/*centraliza horizontalmente*/
 .carrossel-area {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
+/*rolagem horizontal*/
 .carrossel-wrapper {
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 10px 0;
+    padding: 0.25px 0px;
     display: flex; 
     width: 100%;
     max-width: 1200px;  
@@ -34,6 +35,7 @@ body {
     display: none;
 }
 
+/*um do lado do outro*/
 .carrossel {
     display: flex; 
     gap: 16px;
@@ -42,8 +44,7 @@ body {
     flex-wrap: nowrap;  /* Impede que os itens quebrem para a próxima linha */
 }
 
-/***************************************************************************/
-
+/*Apenas a imagem do produto*/
 .produto {
     background: white;
     padding: 0; /* Removido para que a imagem encoste nas bordas */
@@ -60,8 +61,8 @@ body {
 /* Imagem ocupa todo o topo do card */
 .imagem-container {
     width: 100%;
-    height: 100%; /* Deixe o controle da altura para o pai */
-    flex: 1; /* Ocupa o espaço disponível no card */
+    height: 100%; 
+    flex: 1; 
     overflow: hidden;
 }
 
@@ -71,11 +72,6 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* Removido o efeito de zoom no hover */
-.produto:hover .imagem-container img {
-    transform: none;
 }
 
 h1 {
@@ -89,3 +85,47 @@ h1 {
     transform: scale(1.1);
 }
 
+/*grade responsiva*/
+.produtos-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.produto-completo{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #aca9a1;
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.produto-completo img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.produto-completo h2 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+}
+
+.produto-completo p {
+    font-size: 0.95rem;
+    margin: 2px 0;
+}
+
+.produto-completo .preco {
+    font-weight: bold;
+    color: green;
+    margin-top: 5px;
+}
