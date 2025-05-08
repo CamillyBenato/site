@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
-    background-image: url("/fundo_branco.jpg"); 
+    background-color: #EBE2D5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,43 +46,42 @@ body {
 
 .produto {
     background: white;
-    padding: 15px;
+    padding: 0; /* Removido para que a imagem encoste nas bordas */
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgb(221, 120, 199);
-    width: 300px;  /* Aumentar a largura do card */
-    height: 400px; /* Aumentar a altura do card */
-    flex-shrink: 0; /* Impede que os itens encolham */
+    box-shadow: 0 2px 6px #aca9a1;
+    width: 300px;
+    height: 400px;
+    flex-shrink: 0;
+    overflow: hidden; /* Garante que nada ultrapasse os limites */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Garante que o conteúdo do card seja distribuído corretamente */
 }
 
-.produto .preco {
-    font-weight: bold;
-    color: #df68bb;
-}
-
+/* Imagem ocupa todo o topo do card */
 .imagem-container {
     width: 100%;
-    height: 240px;  /* Aumentar a altura da imagem */
+    height: 100%; /* Deixe o controle da altura para o pai */
+    flex: 1; /* Ocupa o espaço disponível no card */
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 10px;
 }
 
+/* Imagem cobre completamente o espaço */
 .imagem-container img {
     width: 100%;
-    height: 100%;  /* Garantir que a imagem ocupe toda a altura do contêiner */
-    object-fit: contain;  /* Manter a imagem inteira e proporcional */
-    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
+}
+
+/* Removido o efeito de zoom no hover */
+.produto:hover .imagem-container img {
+    transform: none;
 }
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    color: #c557a4;
+    color: #000000;
 }
 
 /* Quando passar o mouse no CARD, aplica zoom na imagem */

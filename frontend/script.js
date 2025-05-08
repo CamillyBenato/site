@@ -18,15 +18,12 @@ function renderProdutos(produtos){
         const card = document.createElement("div");
         card.className = "produto";
         card.innerHTML = `
-            <h2>${produto.nome}</h2>
             <div class = "imagem-container">
             <a href = './descricao.html?id=${produto.id}'>
                 <img src = "${produto.imagem}" alt = "${produto.nome}"/>
                 </a>
             </div>
-            <p>${produto.descricao}</p>
-            <p class = "preco"> R$ ${produto.preco}</p>
-            <p><strong> Categoria: </strong> ${produto.categoria.nome}</p>
+            
         `;
         container.appendChild(card);
     });
