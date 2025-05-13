@@ -43,9 +43,8 @@ function renderTodosProdutos(produtos){
         card.innerHTML = `
             <div class="produto-completo">
                 <img src="${produto.imagem}" alt="${produto.nome}" />
-                <h2>${produto.nome}</h2>
+                <h1>${produto.nome}</h1>
                 <p class="preco">R$ ${produto.preco}</p>
-                <p><strong>Categoria:</strong> ${produto.categoria.nome}</p>
             </div>
         `;
         todosContainer.appendChild(card);

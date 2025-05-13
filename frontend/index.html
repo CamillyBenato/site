@@ -4,45 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto API</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="setas.css">
     <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 </head>
-<body>
-    <script src="script.js"></script>
-    <script src="setas.js"></script>
+    <body>
+        <script src="script.js"></script>
+        <script src="setas.js"></script>
 
-    <div class="wrapper">
-        <header class="header">
-            <img class="imagem" src="/logo.png">
-            <barra class="barra">
-                <head class="barra-pesquisa">
-                    <input type="text" id="campo-pesquisa" placeholder="Digite o nome do produto..." onkeyup="filtrarProdutos()" />
-                    <button onclick="filtrarProdutos()">🔍</button>
-                </head>
-        </header>
 
-        <!--Carrossel-->
-        <section class="carrossel-area">
-            <button class="seta esquerda"id="seta-esquerda">&#10094;</button>
-            <div class="carrossel-wrapper">
-                <div id="produtos-container" class="carrossel"></div>
-            </div>
-            <button class="seta direita" id="seta-direita">&#10095;</button>
-        </section>
-
-        <!--Grid Fixo-->
-        
-            <h2>Todos os Produtos</h2>
-            <div id="produtos-todos" class="produtos-container"></div>
-                <div id="produtos-container" class="wrapper">
-                    <div id="div3" class="produto-slot"></div>
-                    <div id="div4" class="produto-slot"></div>
-                    <div id="div5" class="produto-slot"></div>
-                    <div id="div6" class="produto-slot"></div>
+            <!-- Cabeçalho -->
+            <header class="header">
+                <!-- Logo -->
+                <div class="header-left">
+                    <img class="imagem" src="src/logo.png" alt="Logo">
                 </div>
-                <footer class="footer">6</footer>
+                <!-- Barra de pesquisa -->
+                <div class="header-center">
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input id="campo-pesquisa" type="text" placeholder="Buscar item..." class="input-field" onkeyup="filtrarProdutos()" />
+                    </div>
+                </div>
+                <div class="header-right">
+                </div>
+                <!--icones-->
+                <div class="header-right">
+                    <img src="" alt="" class="">
+                </div>
+            </header>
+
+            <!-- Carrossel -->
+            <section class="carrossel-area">
+                <button class="seta esquerda" id="seta-esquerda">&#10094;</button>
+                <div class="carrossel-wrapper">
+                    <div id="produtos-container" class="carrossel"></div>
+                </div>
+                <button class="seta direita" id="seta-direita">&#10095;</button>
+            </section>
+
+            <!-- Todos os Produtos -->
+            <section class="todos-produtos-area">
+                <h2>Mais Vendidos</h2>
+                <div id="produtos-todos" class="produtos-container">
+                  {% for produto in produtos %}
+                    <div class="produto-completo">
+                      <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+                      <p>{{ produto.nome }}</p>
+                      <span>R$ {{ produto.preco }}</span>
+                    </div>
+                  {% endfor %}
+                </div>
+            </section>
+              
+
+            <!-- Rodapé -->
+            <div class = "footer">
+                <div class="footer-left">
+                    <img class="imagem2" src="src/diana_footer-removebg-preview.png" alt="Logo">
+                </div>
+                <div class="footer-center">
+                    <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
+                    <p> Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110 </p>
+                </div>    
+                <div class="footer-right">
+                    <p> Formas de Pagamento </p>
+                </div>
+            </div>
         </div>
-</body>
+    </body>
 </html>
