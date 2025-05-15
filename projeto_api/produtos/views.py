@@ -19,3 +19,24 @@ class ProdutoList(generics.ListCreateAPIView):
 class ProdutoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Produto.objects.all()
     serializer_class = ProdutoSerializer
+
+def presente_view(request):
+    return render(request, 'presente.html')
+
+def cestas_view(request):
+    return render(request, 'cestas.html')
+
+def buques_view(request):
+    return render(request, 'buques.html')
+
+def flores_view(request):
+    return render(request, 'flores.html')
+
+def jardinagem_view(request):
+    return render(request, 'jardinagem.html')
+
+def suculentas_view(request):
+    return render(request, 'suculentas.html')
+
+def sobrenos_view(request):
+    return render(request, 'sobrenos.html')

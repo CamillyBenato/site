@@ -14,7 +14,6 @@
     padding: 0 2rem;
     background-color: #F2B11D;
     height: 200px;
-
 }
 
 .header-left {
@@ -72,7 +71,6 @@
     max-width: 70%;
     max-height: 70%;
     object-fit: contain;
-    
 }
 
 .footer-center {
@@ -91,7 +89,7 @@
     border-top: 1px solid rgb(255, 255, 255);
 }
 
-.footer-center p{
+.footer-center p {
     margin-top: 2; /*remove espaço extra acima do texto*/
 }
 
@@ -103,7 +101,7 @@
     margin: 5px;
 }
 
-.footer-right{
+.footer-right {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -112,7 +110,7 @@
     text-align: center;
 }
 
-.pagamento{
+.pagamento {
     max-width: 250px;
     max-height: 200px;
     object-fit: contain;
@@ -120,7 +118,7 @@
     margin: 5px;
 }
 
-.escrita-forma{
+.escrita-forma {
     font-family: 'Times New Roman', Times, serif;
     color: #000000;
     text-align: center;
@@ -143,6 +141,7 @@
 .wrapper.rows:nth-child(3) {
     background-color: #F5F5F5;
 }
+
 .produto {
     padding: 10px;
     margin-bottom: 8px;
@@ -150,6 +149,7 @@
     border-radius: 5px;
     border: 1px solid #ddd;
 }
+
 .input-group {
     display: flex;
     align-items: center;
@@ -158,9 +158,9 @@
     border-radius: 24px;
     gap: 8px;
     width: 600px;
-    max-width: 90vw;
-    
+    max-width: 90vw;  
 }
+
 .input-icon {
     display: flex;
     align-items: center;
@@ -171,12 +171,73 @@
     background-color: rgb(79, 148, 11);
     color: white;
 }
+
 .input-field {
     width: 100%;
     border: none;
     background-color: transparent;
 }
+
 .input-field:focus {
     outline: none;
 }
 
+.produtos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    list-style: none;
+    margin-top: 12px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 14px;
+    width: 350px;
+    height: 421px;
+    overflow: auto;
+}
+
+.produtos {
+    display: flex;
+    gap: 12px;
+}
+
+.imagemProduto {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.nomeProduto {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.precoProduto {
+    font-size: 12px;
+    color: #666;
+}
+
+.produto-completo {
+    display: flex;
+    flex: row;
+    align-items: center;
+}
+
+.produto {
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.infoProduto {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

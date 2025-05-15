@@ -1,7 +1,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 20px;
-    background-color: #EBE2D5;
+    background-color: #eee4d5;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,11 +15,10 @@ body {
     display: flex;
     gap: 10px;
     max-width: 1350px;
-    margin: 0; 
     justify-self: center;
     align-items: center;
     grid-column: 1 / -1;
-    background-color: #EBE2D5;
+    background-color: transparent;
     margin-bottom: 40px;
 }
 
@@ -30,8 +29,7 @@ body {
     padding: 0.25px 0px;
     display: flex; 
     width: 100%;
-    max-width: 1200px;  
-    margin: 0 auto;
+    max-width: 1200px; 
     scrollbar-width: none; /* Oculta a barra de rolagem */
     -ms-overflow-style: none;  
     margin-bottom: 25px;
@@ -48,7 +46,6 @@ body {
 
 /* Apenas a imagem do produto */
 .produto {
-    box-shadow: 0 2px 6px #f5dfa3;
     width: 300px;
     height: 400px;
     flex-shrink: 0;
@@ -63,6 +60,7 @@ body {
     height: 100%; 
     flex: 1; 
     overflow: hidden;
+    border-radius: 40px;
 }
 
 /* Imagem cobre completamente o espaço */
@@ -71,11 +69,13 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    border-radius: 0;
 }
 
 /* Quando passar o mouse no CARD, aplica zoom na imagem */
 .produto:hover .imagem-container img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    border-radius: 40px;
 }
 
 h1 {

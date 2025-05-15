@@ -1,41 +1,41 @@
-const searchInput = document.getElementById("header-center");
+const pesquisaInput = document.getElementById("campo-pesquisa");
 
-searchInput.addEventListener('input', (event) => {//será mostrado no console
-    const value= formaString(event.target.value);
+pesquisaInput.addEventListener('input', (event) => { // será mostrado no console
+    const value = formaString(event.target.value);
 
-    const produtos= document.querySelectorAll('produtos-todos');//mais de um item
-    const noResults= document.getElementById('no_results');
+    const produtos = document.querySelectorAll('#produtos-todos .produto-completo'); // mais de um item
+    const noResults = document.getElementById('no_results');
 
-    let hasResuls= false;
-if (value !== '') {
-    produtos.array.forEach(element => {
-        const produtoNome= produto.querySelectorAll('produto.nome').textContent;//Pesquisar apenas o título
-        if(formaString(produtoName).indexOf(value) !== -1){//!==(diferente)
-            produto.style.display= 'flex';
-
-            hasResuls= true;
-        }else{
-            produto.style.display= 'none'
-        }
-    });
+    let hasResults = false;
     
-    if (hasResuls) {//irá mostrar os resultados 
-        noResults.style.display= 'none';
-    }else{
-        noResults.style.display= 'block'
-    }
-}else{
-    produto.array.forEach(produto => produto.style.display= 'flex');
+    if (value !== '') {
+        produtos.forEach(produto => {
+            const produtoNome = produto.querySelector('.nomeProduto').textContent; // Pesquisar apenas o título
+            if (formaString(produtoNome).indexOf(value) !== -1) { // !== (diferente)
+                produto.style.display = 'flex';
+                hasResults = true;
+            } else {
+                produto.style.display = 'none';
+            }
+        });
 
-    noResults.style.display= 'none';
-}
-})
+        if (hasResults) { // irá mostrar os resultados 
+            noResults.style.display = 'none';
+        } else {
+            noResults.style.display = 'block';
+        }
+    } else {
+        produtos.forEach(produto => produto.style.display = 'flex'); // mostrar todos novamente
+
+        noResults.style.display = 'none';
+    }
+});
+
+// função para limpar e padronizar a string
 function formaString(value) {
     return value
-    .tolowerCase()//tolowerCase(identificar a letra mesmo se estiver minúscula)
-    .trim()//trim(tirar espaços em brancos no console)
-    .normalLize('NFD')//transforma os acetos em outro caracter
-    .replace(/[\u0300-\u036f]/g, '');
-
+        .toLowerCase() // toLowerCase (identificar a letra mesmo se estiver minúscula)
+        .trim() // trim (tirar espaços em branco no começo/fim)
+        .normalize('NFD') // transforma os acentos em outros caracteres
+        .replace(/[\u0300-\u036f]/g, ''); // remove acentos
 }
-const searchInput= document.getElementById(newLocal)
