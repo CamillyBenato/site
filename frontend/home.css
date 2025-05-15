@@ -17,6 +17,10 @@ body {
     max-width: 1350px;
     margin: 0; 
     justify-self: center;
+    align-items: center;
+    grid-column: 1 / -1;
+    background-color: #EBE2D5;
+    margin-bottom: 40px;
 }
 
 /* Rolagem Horizontal */
@@ -30,6 +34,7 @@ body {
     margin: 0 auto;
     scrollbar-width: none; /* Oculta a barra de rolagem */
     -ms-overflow-style: none;  
+    margin-bottom: 25px;
 }
 
 /* Um do lado do outro */
@@ -85,6 +90,7 @@ h1 {
 h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #A8701A;
+    margin-left: 350px;
 }
 
 /* MAIS VENDIDOS */
@@ -131,3 +137,4 @@ h2 {
     color: #80786C;
     justify-content: left;
 }
+
