@@ -38,46 +38,34 @@
                     placeholder="Buscar item..." 
                     class="input-field" />
             </div>
+
+             
         </div>
-        <ul class="pesquisa" id="resultado-pesquisa">
-            {% for produto in produto %}
-            <li class="produto">
-                <div class="produto-completo">
-                    <img class="imagemProduto" 
-                        src="{{ produto.imagem.url }}" 
-                        alt="{{ produto.nome }}">
-                    <div class="infoProduto">
-                        <p class="nomeProduto">{{ produto.nome}}</p>
-                        <span class="precoProduto">R$ {{ produto.preco}}</span>
-                    </div>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+       
 
         <p id="no_results" style="display: none;">Nenhum resultado encontrado.</p>
 
         <!-- Barra de navegação-->
         <div class="barra-navegacao">
-            <ul class="nav">
-                <li><a href="/presente/">Presentes</a></li>
-                <li><a href="/cestas/">Cestas</a></li>
-                <li><a href="/buques/">Buquês</a></li>
-                <li><a href="/flores/">Flores</a></li>
-                <li><a href="/jardinagem/">Itens de Jardinagem</a></li>
-                <li><a href="/suculentas/">Suculentas</a></li>
-                <li><a href="/sobrenos/">Sobre Nós</a></li>
-            </ul>
-        </div>  
+                <ul class="nav">
+                    <li><a href="/frontend/todos.html?categoria=presente">Presentes</a></li>
+                    <li><a href="/frontend/todos.html?categoria=cestas">Cestas</a></li>
+                    <li><a href="/frontend/todos.html?categoria=buquês">Buquês</a></li>
+                    <li><a href="/frontend/todos.html?categoria=flores">Flores</a></li>
+                    <li><a href="/frontend/todos.html?categoria=jardinagem">Itens de Jardinagem</a></li>
+                    <li><a href="/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
+                    <li><a href="/sobrenos/">Sobre Nós</a></li>
+                </ul>
+        </div> 
 
-        <!-- Espaço vazio para icones -->
-        <div class="header-right"></div>
 
         <!-- icones adicionais -->
         <div class="header-right">
-            <img src="" alt="" class="">
+            <img class="imgPerfil" src="/frontend/src/img.perfil.png">
+            <img class="imgSacola" src="/frontend/src/img.sacola.png">
         </div>
     </header>
+    
 
     <!-- Carrossel -->
     <section class="carrossel-area">
@@ -112,6 +100,7 @@
             <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
             <hr class="linha-divisoria">
             <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+            <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
             <img class="logo-empresa" src="src/logosemfundo.png" alt="Logo Empresa">
         </div>
 

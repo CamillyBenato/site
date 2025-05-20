@@ -6,9 +6,7 @@
 }
 
 .header { 
-    position: relative;
     display: flex;
-    grid-column: 1/-1;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
@@ -16,25 +14,39 @@
     height: 200px;
 }
 
-.header-left {
-    flex-shrink: 0; /*define se o item pode escolher quando o espaço disponível for pequeno demais*/
-    display: flex;
-    align-items: center;
-}
-
-.header-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.header-left
+.header-center,
+.header-right {
+  flex: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.header-right {
-    flex-shrink: 0;
-    margin-left: auto;
-    display: flex;
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-group {
+    justify-content: center;
     align-items: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.imgPerfil, .imgSacola {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-left: 15px;
 }
 
 .imagem {
@@ -231,9 +243,8 @@
 .produto {
     padding: 10px;
     margin-bottom: 8px;
-    background: #f9f9f9;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    background: #eee4d5;
+    border: transparent;
 }
 
 .infoProduto {

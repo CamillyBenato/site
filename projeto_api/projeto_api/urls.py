@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from produtos import views as produtos_views
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -23,6 +24,15 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('produtos.urls')),
+
+    path('', produtos_views.index, name='index'),
+    path('presente/', produtos_views.presente_view, name='presente'),
+    path('cestas/', produtos_views.cestas_view, name='cestas'),
+    path('buques/', produtos_views.buques_view, name='buques'),
+    path('flores/', produtos_views.flores_view, name='flores'),
+    path('jardinagem/', produtos_views.jardinagem_view, name='jardinagem'),
+    path('suculentas/', produtos_views.suculentas_view, name='suculentas'),
+    path('sobrenos/', produtos_views.sobrenos_view, name='sobrenos'),
 ]
 
 if settings.DEBUG:

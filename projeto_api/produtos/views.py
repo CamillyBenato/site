@@ -20,6 +20,9 @@ class ProdutoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Produto.objects.all()
     serializer_class = ProdutoSerializer
 
+def index(request):
+    return render(request, 'index.html')
+
 def presente_view(request):
     return render(request, 'presente.html')
 

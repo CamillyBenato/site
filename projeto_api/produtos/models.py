@@ -13,5 +13,5 @@ class Produto(models.Model):
     categoria = models.ForeignKey(Categoria, related_name='produtos', on_delete=models.CASCADE)
     imagem = models.ImageField(upload_to = 'produtos/', blank = True, null = True)
 
-def __str__(self):
-    return self.nome
+    def __str__(self):
+        return self.nome
