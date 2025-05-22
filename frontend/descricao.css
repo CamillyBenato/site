@@ -1,0 +1,33 @@
+.produto-imagem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.imagem-produto img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.descricao-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descricao-produto h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.descricao-produto .preco {
+    font-size: 1em;
+    color: green;
+    margin-top: 5px;
+}

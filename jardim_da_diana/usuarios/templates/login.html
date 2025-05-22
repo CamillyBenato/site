@@ -1,0 +1,19 @@
+<html>
+    <head>
+        {% load static %}
+        <link rel="icon" type="image/png" href="{% static 'diana.png' %}" sizes="180x180"/>
+
+    </head>
+    <body>
+        <form action="{% url 'login' %}" method="post"> {% csrf_token %}
+            <input type="text" placeholder="Username..." name="username">
+            <br>
+            <br>
+            <input type="password" placeholder="Senha..." name="senha">
+            <br>
+            <br>
+            <input type="submit" value="Logar">
+            <br>
+        </form>
+    </body>
+</html>

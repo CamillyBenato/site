@@ -19,19 +19,30 @@ function fetchProduto() {
 }
 
 function renderProduto(produto){
-    const container = document.getElementById("produtos-container");
-    container.innerHTML = "";
+    const carrosselContainer = document.getElementById("produtos-container");
+    const todosContainer = document.getElementById("produtos-todos");
 
-    const card = document.createElement("div");
-    card.className = "produto";
-    card.innerHTML = `
-        <h2>${produto.nome}</h2>
-        <div>
-           <img src="${produto.imagem}" alt="${produto.nome}" />
-        </div>
+    const cardHTML = `
+        <img src="${produto.imagem}" alt="${produto.nome}">
+        <p><strong>${produto.nome}</strong></p>
         <p>${produto.descricao}</p>
-        <p class="preco">R$ ${produto.preco}</p>
-        <p><strong>Categoria: </strong> ${produto.categoria?.nome || "Sem categoria"} </p>
+        <p><strong>R$ ${produto.preco}</strong></p>
+        <p><em>Categoria: ${produto.categoria?.nome || "Sem categoria"}</em></p>
     `;
-    container.appendChild(card);
+
+    if (carrosselContainer) {
+        carrosselContainer.innerHTML = "";
+        const card = document.createElement("div");
+        card.className = "produto";
+        card.innerHTML = cardHTML;
+        carrosselContainer.appendChild(card);
+    }
+
+    if (todosContainer) {
+        todosContainer.innerHTML = "";
+        const card = document.createElement("div");
+        card.className = "produto-completo";
+        card.innerHTML = cardHTML;
+        todosContainer.appendChild(card);
+    }
 }

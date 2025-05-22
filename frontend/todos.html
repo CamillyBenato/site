@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentes</title>
+    <title>Todos</title>
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="navegacao.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 </head>
 <body>
      <!-- SCRIPTS -->
     <script src="navegacao.js"></script>
     <script src="todos.js"></script>
+
    
     <!-- CABEÇALHO -->
     <header class="header">
@@ -19,6 +22,19 @@
     <div class="header-left">
         <img class="imagem" src="src/logo.png" alt="Logo">
     </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="header-center">
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input 
+                id="campo-pesquisa" 
+                type="text" 
+                placeholder="Buscar item..." 
+                class="input-field" />
+        </div>
 
 
         <!-- BARRA DE NAVEGAÇÃO -->
@@ -39,8 +55,12 @@
 
         <!-- ESPAÇO VAZIO PARA ÍCONES -->
         <div class="header-right">
-            <img class="imgPerfil" src="/frontend/src/img.perfil.png">
-            <img class="imgSacola" src="/frontend/src/img.sacola.png">
+            <a href="informacoes_perfil.html">
+                <img class="imgPerfil" src="/frontend/src/img.perfil.png" alt="Imagem clicável"/>
+            </a>
+            <a href="sacola.html">
+                <img class="imgSacola" src="/frontend/src/img.sacola.png" alt="Imagem clicável"/>
+            </a>
         </div>
     </header>
 
