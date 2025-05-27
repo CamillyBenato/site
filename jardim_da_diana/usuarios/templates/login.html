@@ -1,19 +1,61 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="/frontend/base.css">
+        <link rel="stylesheet" href="/frontend/style2.css">
+        <link rel="stylesheet" href="/frontend/login.css">
         {% load static %}
         <link rel="icon" type="image/png" href="{% static 'diana.png' %}" sizes="180x180"/>
-
     </head>
     <body>
-        <form action="{% url 'login' %}" method="post"> {% csrf_token %}
-            <input type="text" placeholder="Username..." name="username">
-            <br>
-            <br>
-            <input type="password" placeholder="Senha..." name="senha">
-            <br>
-            <br>
-            <input type="submit" value="Logar">
-            <br>
-        </form>
+        <script src="todos.js"></script>
+
+            <!-- CABEÇALHO -->
+            <header class="header">
+                <img src="/frontend/src/logoDiana2.png" alt="Diana2" class="diana2">
+            </header>
+
+        <!-- LOGIN -->  
+        <center>  
+            <div class="card-login">
+                <h1><p>Login</p></h1>
+                <form class="textField" action="{% url 'login' %}" method="post" {% csrf_token %}>
+                    <input class="usuarioLogin" type="text" placeholder="Username..." name="username">
+                    <br>
+                    <br>
+                    <input class="senhaLogin" type="password" placeholder="Senha..." name="senha">
+                    <br>
+                    <br>
+                    <input class="botaoLogin" type="submit" value="Entrar">
+                    <br>
+                    <div class="cd">
+                        <p>Não tem cadastro?</p>
+                        <p class="cadastre">Cadastre-se!</p>
+                    </div>
+                </form>
+            </div>
+        </center>
     </body>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img class="logo-footer" src="/frontend/src/diana_footer-removebg-preview.png" alt="Logo">
+        </div>
+
+        <div class="footer-center">
+            <img class="redes-sociais" src="/frontend/src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
+            <hr class="linha-divisoria">
+            <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+            <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
+            <img class="logo-empresa" src="/frontend/src/logosemfundo.png" alt="Logo Empresa">
+        </div>
+
+        <div class="footer-right">
+            <p class="escrita-forma">Formas de Pagamento</p>
+            <img class="pagamento" src="/frontend/src/formadepagamento.png" alt="Pagamento">
+        </div>
+    </footer>
 </html>

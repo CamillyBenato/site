@@ -19,7 +19,8 @@
 
     <center>
         <div class="card-cadastro">
-            <form class="textField" action="{% url 'cadastro' %}" method="post"> {% csrf_token %}
+            <h1><p class="cadastre-se">Cadastre-se</p></h1>
+            <form class="textField" action="{% url 'cadastro' %}" method="post" {% csrf_token %}>
                 <input class="username" type="text" placeholder="Username..." name="username">
                 <br>
                 <br>
@@ -29,7 +30,7 @@
                 <input class="senha" type="password" placeholder="Senha..." name="senha">
                 <br>
                 <br>
-                <input class="botao" type="submit" value="cadastrar">
+                <input class="botao" type="submit" value="Cadastrar">
                 <br>
             </form>
         </div>
@@ -37,7 +38,7 @@
 
     </body>
 
-<!-- Rodapé -->
+    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-left">
             <img class="logo-footer" src="/frontend/src/diana_footer-removebg-preview.png" alt="Logo">

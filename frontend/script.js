@@ -40,7 +40,7 @@ function renderTodosProdutos(produtos) {
 
     const quantidadeMaisVendidos = 8;
 
-    produtos.slice(0, quantidadeMaisVendidos).forEach(produto => {
+    produtos.slice(quantidadeMaisVendidos).forEach(produto => {
         const card = document.createElement("div");
         card.className = "produto-item";
         card.innerHTML = `
