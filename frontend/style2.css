@@ -29,8 +29,10 @@
 
 .header-center {
     position: absolute;
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 }
 
 .input-group {

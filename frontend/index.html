@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="navegacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
-    <!-- Scripts -->
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
     <script src="setas.js"></script>
     <script src="navegacao.js"></script>
 
-    <!-- Cabeçalho -->
+    <!-- CABEÇALHO -->
     <header class="header">
-        <!-- Logo -->
+        <!-- LOGO -->
         <div class="header-left">
+            <a href="/frontend/index.html">
             <img class="imagem" src="src/logo.png" alt="Logo">
         </div>
 
-        <!-- Barra de pesquisa -->
+        <!-- BARRA DE PESQUISA -->
         <div class="header-center">
             <div class="input-group">
                 <div class="input-icon">
@@ -38,15 +38,13 @@
                     placeholder="Buscar item..." 
                     class="input-field" />
             </div>
-
-             
         </div>
-       
 
         <p id="no_results" style="display: none;">Nenhum resultado encontrado.</p>
 
-        <!-- Barra de navegação-->
-        <div class="barra-navegacao">
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <div class="header-center">
+            <div class="barra-navegacao">
                 <ul class="nav">
                     <li><a href="/frontend/todos.html?categoria=presentes">Presentes</a></li>
                     <li><a href="/frontend/todos.html?categoria=cestas">Cestas</a></li>
@@ -56,10 +54,10 @@
                     <li><a href="/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
                     <li><a href="/sobrenos/">Sobre Nós</a></li>
                 </ul>
-        </div> 
+            </div> 
+        </div>
 
-
-        <!-- icones adicionais -->
+        <!-- ESPAÇO VAZIO PARA ÍCONES -->
         <div class="header-right">
                 <img class="imgPerfil" src="/frontend/src/img.perfil.png">
                 <img class="imgSacola" src="/frontend/src/img.sacola.png">
@@ -68,7 +66,7 @@
     </header>
     
 
-    <!-- Carrossel -->
+    <!-- CARROSEL -->
     <section class="carrossel-area">
         <button class="seta esquerda" id="seta-esquerda">&#10094;</button>
         <div class="carrossel-wrapper">
@@ -77,7 +75,7 @@
         <button class="seta direita" id="seta-direita">&#10095;</button>
     </section>
 
-    <!-- Todos os Produtos -->
+    <!-- TODOS OS PRODUTOS -->
     <section class="todos-produtos-area">
         <h2>Mais Vendidos</h2>
         <div id="produtos-todos" class="produtos-container">
@@ -91,7 +89,7 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
+    <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-left">
             <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">

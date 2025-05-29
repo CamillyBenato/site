@@ -24,7 +24,6 @@ body {
     padding: 0 2rem;
     background-color: #F2B11D;
     height: 200px;
-
 }
 
 .header-left {
@@ -35,7 +34,7 @@ body {
 
 .header-center {
   position: absolute;
-  left: 50%;
+  left: 4%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
@@ -210,4 +209,15 @@ body {
     height: 40px;
     object-fit: contain;
     margin-left: 15px;
+
+    position: absolute; /* posicionamento absoluto */
+    top: 10px;
+}
+
+.imgPerfil {
+    right: -550px; /* posição personalizada */
+}
+
+.imgSacola {
+    right: -600px;
 }

@@ -9,12 +9,11 @@ body {
 }
 
 /* CARROSSEL */
-
 /* Centraliza Horizontalmente */
 .carrossel-area {
     display: flex;
     gap: 10px;
-    max-width: 1350px;
+    max-width: 1300px;
     justify-self: center;
     align-items: center;
     grid-column: 1 / -1;
@@ -27,12 +26,12 @@ body {
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 0.25px 0px;
-    display: flex; 
     width: 100%;
     max-width: 1200px; 
     scrollbar-width: none; /* Oculta a barra de rolagem */
     -ms-overflow-style: none;  
     margin-bottom: 25px;
+    margin-left: 18px;
 }
 
 /* Um do lado do outro */

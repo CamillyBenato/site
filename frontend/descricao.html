@@ -19,7 +19,7 @@
     <header class="header">
         <!-- LOGO -->
         <div class="header-left">
-            <img class="imagem" src="src/logo.png" alt="Logo">
+            <a href="/frontend/index.html" img class="imagem" src="src/logo.png" alt="Logo">
         </div>
 
         <!-- BARRA DE NAVEGAÇÃO -->
@@ -45,7 +45,26 @@
         </section>
     <main>
 
-    <!-- RODAPÉ -->
+    <!-- CONTAINER IMAGEM -->
+    <div class="produtos-container">
+        <!-- IMAGEM -->
+        <div class="produto.imagem">
+            <img src="{{produto.imagem.url}}" alt="{{produto.nome}}">
+        </div>
+
+        <!-- DESCRIÇÃO E PREÇO -->
+        <div class="produto.descricao">
+            <h2> R${{produto.preco}} </h2>
+            <p><strong> {{produto.nome}} </strong> - {{produto.descricao}} </p>
+            <p><span style="color: green;"> Frete grátis </span></p>
+            <form action="{% url 'comprar_produto' produto.id %}" method="post"
+                {% csrf_token %}>
+                <button class="botao-comprar">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+            <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-left">
             <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">
