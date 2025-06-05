@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="navegacao.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+     <!-- SCRIPTS -->
+    <script src="navegacao.js"></script>
+    <script src="todos.js"></script>
+
+   
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <!-- LOGO -->
+    <div class="header-left">
+        <a href="/frontend/index.html">
+        <img class="imagem" src="src/logo.png" alt="Logo">
+    </div>
+
+    <!-- Barra de pesquisa -->
+    <div class="header-center">
+        <div class="input-group">
+            <div class="input-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input 
+                id="campo-pesquisa" 
+                type="text" 
+                placeholder="Buscar item..." 
+                class="input-field" />
+        </div>
+
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <div class="header-center">    
+            <div class="barra-navegacao">
+                <ul class="nav">
+                    <li><a href="/frontend/todos.html?categoria=presentes">Presentes</a></li>
+                    <li><a href="/frontend/todos.html?categoria=cestas">Cestas</a></li>
+                    <li><a href="/frontend/todos.html?categoria=buquês">Buquês</a></li>
+                    <li><a href="/frontend/todos.html?categoria=flores">Flores</a></li>
+                    <li><a href="/frontend/todos.html?categoria=jardinagem">Itens de Jardinagem</a></li>
+                    <li><a href="/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
+                    <li><a href="/sobrenos/">Sobre Nós</a></li>
+
+                </ul>
+            </div> 
+        </div>      
+
+        <!-- ESPAÇO VAZIO PARA ÍCONES -->
+        <div class="header-right">
+            <a href="informacoes_perfil.html">
+            <img class="imgPerfil" src="/frontend/src/img.perfil.png" alt="Imagem clicável"/>
+            </a>
+            <a href="sacola.html">
+            <img class="imgSacola" src="/frontend/src/img.sacola.png" alt="Imagem clicável"/>
+            </a>
+        </div>
+    </header>
+
+    <!-- TODOS OS PRODUTOS -->
+    <section class="todos-produtos-area">
+        <div id="produtos-todos" class="produtos-container">
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">
+        </div>
+
+        <div class="footer-center">
+            <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
+            <hr class="linha-divisoria">
+            <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+            <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
+            <img class="logo-empresa" src="src/logosemfundo.png" alt="Logo Empresa">
+        </div>
+
+        <div class="footer-right">
+            <p class="escrita-forma">Formas de Pagamento</p>
+            <img class="pagamento" src="src/formadepagamento.png" alt="Pagamento">
+        </div>
+    </footer>
+</body>
+</html>

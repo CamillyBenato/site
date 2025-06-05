@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição Produto</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="navegacao.css">
+    <link rel="stylesheet" href="descricao.css">
+
+</head>
+<body>
+    <!--SCRIPTS -->
+    <script src="navegacao.js"></script>
+    <script src="sobrenos.js"></script>
+    <script src="descricao.js"></script>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <!-- LOGO -->
+        <div class="header-left">
+            <a href="/frontend/index.html" img class="imagem" src="src/logo.png" alt="Logo">
+        </div>
+
+        <!-- BARRA DE NAVEGAÇÃO -->
+        <div class="barra-navegacao">
+            <ul class="nav">
+                <li><a href="/frontend/todos.html?categoria=presente">Presentes</a></li>
+                <li><a href="/frontend/todos.html?categoria=cestas">Cestas</a></li>
+                <li><a href="/frontend/todos.html?categoria=buquês">Buquês</a></li>
+                <li><a href="/frontend/todos.html?categoria=flores">Flores</a></li>
+                <li><a href="/frontend/todos.html?categoria=jardinagem">Itens de Jardinagem</a></li>
+                <li><a href="/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
+                <li><a href="/sobrenos/">Sobre Nós</a></li>
+            </ul>
+        </div>
+
+        <!-- ESPAÇO VAZIO PARA ÍCONES -->
+        <div class="header-right"></div>
+    </header>
+
+    <main>
+        <section class="descricao-produto">
+            <div id="produtos-container"></div>
+        </section>
+    <main>
+
+    <!-- CONTAINER IMAGEM -->
+    <div class="produtos-container">
+        <!-- IMAGEM -->
+        <div class="produto.imagem">
+            <img src="{{produto.imagem.url}}" alt="{{produto.nome}}">
+        </div>
+
+        <!-- DESCRIÇÃO E PREÇO -->
+        <div class="produto.descricao">
+            <h2> R${{produto.preco}} </h2>
+            <p><strong> {{produto.nome}} </strong> - {{produto.descricao}} </p>
+            <p><span style="color: green;"> Frete grátis </span></p>
+            <form action="{% url 'comprar_produto' produto.id %}" method="post"
+                {% csrf_token %}>
+                <button class="botao-comprar">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+            <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">
+        </div>
+
+        <div class="footer-center">
+            <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes SOciais">
+            <hr class="linha-divisoria">
+            <p> Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110 </p>
+            <img class="logo-empresa" src="src/logosemfundo.png" alt="Logo Empresa">
+        </div>
+
+        <div class="footer-right">
+            <p class="escrita-forma"> Fontes de Pagamento </p>
+            <img class="pagamento" src="src/formadepagamento.png" alt="Pagamento">
+        </div>
+    </footer>
+
+</body>
+</html>
