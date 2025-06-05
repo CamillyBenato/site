@@ -7,7 +7,7 @@
     font-size: 16px;
     line-height: 1.8;
     width: 750px;
-    height: 750px;
+    height: 800px;
     margin: 40px auto;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -19,4 +19,11 @@ body{
 
 .produtos-container p {
     text-align: justify; 
+}
+
+.luciana{
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-left: 165px;
 }
