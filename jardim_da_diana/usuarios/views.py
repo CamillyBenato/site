@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login as login_django
@@ -10,13 +10,13 @@ def cadastro(request):
     else:
         username = request.POST.get('username')
         email = request.POST.get('email')
-        senha = request.POST.get('password')  # Corrigido: "password" deve bater com o name do input
+        senha = request.POST.get('password')
 
         if User.objects.filter(username=username).exists():
             return HttpResponse('Já existe um usuário com esse username')
 
         User.objects.create_user(username=username, email=email, password=senha)
-        return HttpResponse('Usuário cadastrado com sucesso')
+        return redirect('/auth/login/')  # Redireciona após cadastro
 
 def login(request):
     if request.method == 'GET':
@@ -29,9 +29,9 @@ def login(request):
 
         if user:
             login_django(request, user)
-            return HttpResponse('Autenticado com sucesso')
+            return redirect('/static/frontend/index.html')  # Redireciona para a home
         else:
-            return HttpResponse('Usuário ou senha inválidos')
+            return HttpResponse('Usuário ou senha inválidos')  # Mantém mensagem de erro
 
 @login_required(login_url='/auth/login/')
 def plataforma(request):
