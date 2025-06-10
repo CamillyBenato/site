@@ -1,0 +1,188 @@
+.sacola-main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7f0e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sacola-main h1 {
+    font-size: 32px;
+    color: #F2B11D;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sacola-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.itens-sacola {
+    flex: 2; /* Ocupa mais espaço */
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.item-sacola {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-sacola:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item-sacola img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.item-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.item-quantidade {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.item-quantidade input {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.item-quantidade button {
+    background-color: #F2B11D;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.item-quantidade button:hover {
+    background-color: #da9f1a;
+}
+
+.item-preco {
+    font-weight: bold;
+    color: #80786C;
+    font-size: 18px;
+    margin-left: 20px;
+    width: 100px; /* Garante que o preço tenha espaço */
+    text-align: right;
+}
+
+.remover-item {
+    background-color: #dc3545; /* Vermelho para remover */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.remover-item:hover {
+    background-color: #c82333;
+}
+
+.resumo-pedido {
+    flex: 1; /* Ocupa menos espaço */
+    min-width: 280px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.resumo-pedido h2 {
+    font-size: 24px;
+    color: #F2B11D;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.resumo-linha.total-final {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.finalizar-pedido {
+    background-color: #2e8b57;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.finalizar-pedido:hover {
+    background-color: #256d46;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .sacola-container {
+        flex-direction: column;
+    }
+    .itens-sacola, .resumo-pedido {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.valor-frete{
+    color: green;
+}

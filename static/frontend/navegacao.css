@@ -1,0 +1,29 @@
+.barra-navegacao {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 155px;
+}
+
+.barra-navegacao .nav{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    white-space: nowrap;
+}
+
+.barra-navegacao .nav li{
+    display: inline;
+}
+
+.barra-navegacao .nav a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: color 0.3s ease;
+}
+
+.barra-navegacao .nav a:hover{
+    color: #2C641E;
+}

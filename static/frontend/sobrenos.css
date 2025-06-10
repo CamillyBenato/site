@@ -1,0 +1,28 @@
+.historia-area {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    color: #6D3B10;
+    font-size: 16px;
+    line-height: 1.8;
+    width: 750px;
+    height: 800px;
+    margin: 40px auto;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+body{
+    background-color: #eee4d5;
+}
+
+.produtos-container p {
+    text-align: justify; 
+}
+
+.luciana{
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+}

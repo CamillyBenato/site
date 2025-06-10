@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-login {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 70px auto;
+}
+
+.card-login > h1 {
+    margin-bottom: 20px;
+}
+
+.textField {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.textField > input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 12pt;
+    box-shadow: 0px 1px 7px #0000005b;
+    outline: none;
+    margin: 10px 0;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2B11D;
+}
+
+.diana2 {
+    margin: 0 auto 20px;
+    width: 80px;
+}
+
+.botaoLogin {
+    background-color: rgb(79, 148, 11);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cd {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cadastre {
+    color: #F2B11D;
+    text-decoration: none;
+}

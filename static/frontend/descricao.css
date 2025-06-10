@@ -1,0 +1,85 @@
+/* Corrigido: de .produto.container-descricao para .produtos-container-descricao */
+.produtos-container-descricao { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #f7f0e6;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.produto-imagem-descricao img {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    border-radius: 12px;
+    /* Corrigido: Adicionado valores para rgba */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Corrigido: de .produto.detalhes-descricao para .produto-detalhes-descricao */
+.produto-detalhes-descricao { 
+    max-width: 450px;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    /* Corrigido: Adicionado valores para rgba */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Corrigido: de .produto.detalhes-descricao h1 para .produto-detalhes-descricao h1 */
+.produto-detalhes-descricao h1 { 
+    color: #f7941d;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.produto-detalhes-descricao p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5; /* Corrigido: Removido ponto e vírgula extra */
+}
+
+.produto-detalhes-descricao .produto-preco {
+    font-weight: bold;
+    color: #80786C;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* Corrigido: de .botao.comprar para .botao-comprar */
+.botao-comprar, .botao-favoritar { 
+    background-color: #2e8b57;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.botao-comprar:hover {
+    background-color: #256d46;
+}
+
+.botao-favoritar {
+    background-color: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espaçamento entre o texto e o ícone */
+}
+
+.botao-favoritar:hover {
+    background-color: #F2B11D;
+}

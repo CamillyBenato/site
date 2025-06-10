@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadatro</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="{% static 'cadastro.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'diana.png' %}" sizes="180x180"/>
+</head>
+
+    <body>
+        {% if erro %}
+        <script>
+                alert("{{ erro }}");
+        </script>
+        {% endif %}
+
+        <script src="todos.js"></script>
+
+        <!-- CABEÇALHO -->
+    <header class="header">
+        <a href="../../../static/frontend/index.html"> <img src="{% static 'src/logoDiana2.png' %}" alt="Logo Diana" class="diana2"></a>
+    </header>
+
+    <center>
+        <div class="card-cadastro">
+            <h1><p class="cadastre-se">Cadastre-se</p></h1>
+            <form class="textField" action="{% url 'cadastro' %}" method="post"> {% csrf_token %}
+                <input class="username" type="text" placeholder="Username..." name="username">
+                <br>
+                <br>
+                <input class="email" type="email" placeholder="Email..." name="email">
+                <br>
+                <br>
+                <input class="senha" type="password" placeholder="Senha..." name="senha">
+                <br>
+                <br>
+                <input class="botao" type="submit" value="Cadastrar">
+                <br>
+            </form>
+        </div>
+    </center>
+
+    </body>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img class="logo-footer" src="{% static 'src/diana_footer-removebg-preview.png' %}" alt="Logo">
+        </div>
+
+        <div class="footer-center">
+            <img class="redes-sociais" src="{% static 'src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png' %}" alt="Redes Sociais">
+            <hr class="linha-divisoria">
+            <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+            <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
+            <img class="logo-empresa" src="{% static 'src/logosemfundo.png' %}" alt="Logo Empresa">
+        </div>
+
+        <div class="footer-right">
+            <p class="escrita-forma">Formas de Pagamento</p>
+            <img class="pagamento" src="{% static 'src/formadepagamento.png' %}" alt="Pagamento">
+        </div>
+    </footer>
+</body>
+</html>

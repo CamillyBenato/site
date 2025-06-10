@@ -1,0 +1,101 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0; /* corrigido: antes estava margin: 20px */
+    background-color: #eee4d5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 3rem;
+}
+
+/* HEADER */
+.header { 
+    position: relative;
+    display: flex;
+    width: 100%; /* adicionado */
+    grid-column: 1/-1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #F2B11D;
+    height: 200px;
+}
+
+.header-left, .header-center, .header-right {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-right {
+    margin-left: auto;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    width: 100%; /* adicionado */
+    background-color: #F2B11D;
+    flex-wrap: wrap;
+}
+
+.footer .footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-left .logo-footer {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+
+.footer-center p {
+    margin: 0; /* corrigido */
+}
+
+.logo-empresa {
+    max-width: 100px;
+    max-height: 60px;
+    object-fit: contain;
+    margin: 5px;
+}
+
+.pagamento {
+    max-width: 250px;
+    max-height: 200px;
+    object-fit: contain;
+    margin: 5px;
+}
+
+.escrita-forma {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    text-align: center;
+    margin-top: 0;
+}
+
+.redes-sociais {
+    height: 40px;
+    margin-bottom: 4px;
+}
