@@ -12,6 +12,12 @@
 </head>
 
     <body>
+        {% if erro %}
+        <script>
+                alert("{{ erro }}");
+        </script>
+        {% endif %}
+
         <script src="todos.js"></script>
 
         <!-- CABEÇALHO -->

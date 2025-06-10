@@ -11,6 +11,11 @@
     <link rel="icon" type="image/png" href="{% static 'diana.png' %}" sizes="180x180"/>
 </head>
 <body>
+    {% if erro %}
+        <script>
+                alert("{{ erro }}");
+        </script>
+        {% endif %}
     <script src="{% static 'todos.js' %}"></script>
 
     <!-- CABEÇALHO -->
