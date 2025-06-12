@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim da Diana - Finalizar Pedido</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="navegacao.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="finalizacao.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/jardim_da_diana/static/diana.png" sizes="180x180"/>
+</head>
+<body>
+    <header class="header-finalizacao">
+        <a href="/jardim_da_diana/static/frontend/index.html">
+            <img src="src/logoDiana2.png" alt="Logo Diana" class="diana2">
+        </a>
+    </header>
+
+    <main class="finalizacao-content">
+        <div class="card-finalizacao">
+            <h1>Finalizar pedido</h1>
+
+            <div id="itens-pedido-resumo" class="itens-pedido-resumo">
+                </div>
+
+            <div class="total-finalizacao">
+                <span>Total :</span>
+                <span id="total-final-pedido">R$ 0,00</span>
+            </div>
+
+            <div class="endereco-entrega">
+                <h2>Adicione o endereço</h2>
+                <input type="text" id="campo-endereco" placeholder="Rua dos bobos, número 0, Bairro música" required>
+            </div>
+
+            <div class="informacoes-datas">
+                <div class="data-estimada">
+                    <span>Data estimada de entrega - <span id="data-estimada-entrega"></span></span>
+                </div>
+                <div class="data-pedido">
+                    <span>O pedido será realizado no dia <span id="data-realizacao-pedido"></span></span>
+                </div>
+            </div>
+
+            <div class="frete-gratis">
+                Frete grátis
+            </div>
+
+            <div class="formas-pagamento">
+                <h2>Forma de pagamento</h2>
+                <div class="opcao-pagamento">
+                    <input type="radio" id="cartao-credito" name="forma_pagamento" value="cartao_credito" checked>
+                    <label for="cartao-credito">
+                        Cartão de crédito <img src="src/card_icon.png" alt="Ícone Cartão">
+                    </label>
+                </div>
+                <div class="opcao-pagamento">
+                    <input type="radio" id="pix" name="forma_pagamento" value="pix">
+                    <label for="pix">
+                        Via pix <img src="src/pix_icon.png" alt="Ícone Pix">
+                    </label>
+                </div>
+            </div>
+
+            <button id="confirmar-pedido-btn" class="btn-confirmar-pedido">Confirmar Pedido</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="footer-center">
+            <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom_1-removebg-preview.png" alt="Redes Sociais">
+            <hr class="linha-divisoria">
+            <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
+            <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
+            <img class="logo-empresa" src="src/logosemfundo.png" alt="Logo Empresa">
+        </div>
+        <div class="footer-right">
+            <p class="escrita-forma">Formas de Pagamento</p>
+            <img class="pagamento" src="src/formadepagamento.png" alt="Pagamento">
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="finalizacao.js"></script>
+</body>
+</html>
