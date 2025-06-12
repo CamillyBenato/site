@@ -6,7 +6,7 @@
     color: #6D3B10;
     font-size: 16px;
     line-height: 1.8;
-    width: 750px;
+    width: 800px;
     height: 800px;
     margin: 40px auto;
     font-family: 'Times New Roman', Times, serif;
@@ -22,8 +22,8 @@ body{
 }
 
 .luciana{
-    width: 400px;
-    height: 400px;
+    width: 275px;
+    height: 275px;
     margin-top: 30px;
-    margin-left: 165px;
 }
+

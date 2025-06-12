@@ -1,0 +1,39 @@
+.produto-item .descricao {
+    display: none; /* Esta linha esconde completamente o elemento */
+}
+
+
+.produto-item h1 {
+    padding: 0 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color: #A8701A;
+}
+
+/* Ajustes gerais para o container do produto para centralizar e alinhar */
+.produto-item .produto-completo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Adiciona algum padding interno */
+}
+
+.produto-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    margin-bottom: 10px;
+}
+
+.produto-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* Permite que o link atue como um container flex para seus filhos */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* O link ocupa toda a largura do produto-completo */
+}

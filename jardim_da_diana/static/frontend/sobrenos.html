@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto API</title>
-
+    <title>Jardim da Diana</title>
+    <link rel="stylesheet" href="setas.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="navegacao.css">
-    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="stylesheet" href="opcoes_perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="icon" type="image/png" href="{% static 'diana.png' %}" sizes="180x180"/>
+    <link rel="stylesheet" href="sacola.html">
+    <link rel="stylesheet" href="sacola.css">
+    <link rel="stylesheet" href="login.html">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="sobrenos.css">
+    <link rel="icon" type="image/png" href="../../../static/frontend/src/diana.png" sizes="180x180"/>
 </head>
 <body>
 
@@ -18,13 +23,14 @@
     <script src="script.js"></script>
     <script src="setas.js"></script>
     <script src="navegacao.js"></script>
+    <script src="sacola.js"></script>
+
 
     <!-- CABEÇALHO -->
     <header class="header">
         <!-- LOGO -->
         <div class="header-left">
-            <a href="/frontend/index.html">
-            <img class="imagem" src="src/logo.png" alt="Logo">
+            <a href="../../../static/frontend/index.html"> <img class="imagem" src="src/logo.png" alt="Logo"> </a>
         </div>
 
         <!-- BARRA DE PESQUISA -->
@@ -47,63 +53,69 @@
         <div class="header-center">
             <div class="barra-navegacao">
                 <ul class="nav">
-                    <li><a href="/frontend/todos.html?categoria=presentes">Presentes</a></li>
-                    <li><a href="/frontend/todos.html?categoria=cestas">Cestas</a></li>
-                    <li><a href="/frontend/todos.html?categoria=buquês">Buquês</a></li>
-                    <li><a href="/frontend/todos.html?categoria=flores">Flores</a></li>
-                    <li><a href="/frontend/todos.html?categoria=jardinagem">Itens de Jardinagem</a></li>
-                    <li><a href="/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
-                    <li><a href="/frontend/sobrenos.html">Sobre Nós</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=presentes">Presentes</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=cestas">Cestas</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=buquês">Buquês</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=flores">Flores</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=jardinagem">Itens de Jardinagem</a></li>
+                    <li><a href="../../../static/frontend/todos.html?categoria=suculentas">Suculentas</a></li>
+                    <li><a href="../../../static/frontend/sobrenos.html">Sobre Nós</a></li>
                 </ul>
             </div> 
         </div>
 
         <!-- ESPAÇO VAZIO PARA ÍCONES -->
         <div class="header-right">
-                <img class="imgPerfil" src="/frontend/src/img.perfil.png">
-                <img class="imgSacola" src="/frontend/src/img.sacola.png">
-            </a>
+                <div class="profile-menu" onmouseover="showMenu()" onmouseout="hideMenu()">
+                    <img src="/../../../static/frontend/src/img.perfil.png" alt="perfil" class="imgPerfil">
+                    <div id="dropdown" class="dropdown-menu">
+                        <a href="/../../../static/frontend/informacoes_perfil.html"> Dados da Conta </a>
+                        <a href="/../../../static/frontend/favoritos.html"> Favoritos </a>
+                        <a href="/../../../usuarios/templates/login.html"> Login </a>
+                    </div>
+                </div>
+                <a href="sacola.html">
+                    <img class="imgSacola" src="../../../static/frontend/src/img.sacola.png" alt="Imagem clicável"/>
+                </a>
         </div>
     </header>
     
 
     <!-- TODOS OS PRODUTOS -->
-    <section class="todos-produtos-area">
-        <div id="produtos-todos" class="produtos-container">
-            <p class="historia-area"> 
-                O Jardim da Diana nasceu do sonho de transformar a vida das pessoas por meio da delicadeza das plantas. Inspirada por sua mascote, a calopsita Diana, que encantava todos ao pousar entre as flores, nossa fundadora Luciana decidiu criar um espaço onde o acolhimento, a beleza e a natureza estivessem sempre presentes.
-                
-                Em meio a um período de desafios e mudanças, Luciana encontrou nos jogos de simulação como Stardew Valley a motivação para imaginar um jardim real — um lugar onde cada planta contasse uma história e cada detalhe fosse pensado com carinho. Vendendo seu videogame como primeiro passo, ela deu vida ao Jardim da Diana em 05 de julho de 2023.
-                
-                Desde então, nosso propósito é claro: oferecer bem-estar, leveza e conexão com a natureza. Trabalhamos com amor pelas plantas, respeito pelas histórias de cada cliente e coragem para transformar desafios em flores. Nosso atendimento é guiado pela delicadeza e pelo desejo genuíno de fazer cada pessoa se sentir acolhida.
-                
-                Com uma identidade visual pixelada que remete à nostalgia dos jogos e à sensibilidade da nossa proposta, o Jardim da Diana é mais do que uma floricultura. É um espaço afetivo, feito por quem acredita que até os pequenos gestos — como o caminhar de uma calopsita entre as flores — podem transformar o dia de alguém.
-                
-                Seja bem-vindo ao nosso jardim. Aqui, cada flor tem um afeto e cada plantinha é um novo começo. <br>
-
-            <img class="luciana" src="src/download.png">
-            </p>
+        <p class="historia-area"> 
+            O Jardim da Diana nasceu do sonho de transformar a vida das pessoas por meio da delicadeza das plantas. Inspirada por sua mascote, a calopsita Diana, que encantava todos ao pousar entre as flores, nossa fundadora Luciana decidiu criar um espaço onde o acolhimento, a beleza e a natureza estivessem sempre presentes.
             
-        </div>
+            Em meio a um período de desafios e mudanças, Luciana encontrou nos jogos de simulação como Stardew Valley a motivação para imaginar um jardim real — um lugar onde cada planta contasse uma história e cada detalhe fosse pensado com carinho. Vendendo seu videogame como primeiro passo, ela deu vida ao Jardim da Diana em 05 de julho de 2023.
+            
+            Desde então, nosso propósito é claro: oferecer bem-estar, leveza e conexão com a natureza. Trabalhamos com amor pelas plantas, respeito pelas histórias de cada cliente e coragem para transformar desafios em flores. Nosso atendimento é guiado pela delicadeza e pelo desejo genuíno de fazer cada pessoa se sentir acolhida.
+            
+            Com uma identidade visual pixelada que remete à nostalgia dos jogos e à sensibilidade da nossa proposta, o Jardim da Diana é mais do que uma floricultura. É um espaço afetivo, feito por quem acredita que até os pequenos gestos — como o caminhar de uma calopsita entre as flores — podem transformar o dia de alguém.
+            
+            Seja bem-vindo ao nosso jardim. Aqui, cada flor tem um afeto e cada plantinha é um novo começo. <br>
+
+            <img class="luciana" src="../../../static/frontend/src/download.png">
+        </p>
+    
+</div>
     </section>
 
     <!-- RODAPÉ -->
     <footer class="footer">
         <div class="footer-left">
-            <img class="logo-footer" src="src/diana_footer-removebg-preview.png" alt="Logo">
+            <img class="logo-footer" src="../../../static/frontend/src/diana_footer-removebg-preview.png" alt="Logo">
         </div>
 
         <div class="footer-center">
-            <img class="redes-sociais" src="src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
+            <img class="redes-sociais" src="../../../static/frontend/src/Ícones_de_Redes_Sociais_em_Marrom__1_-removebg-preview.png" alt="Redes Sociais">
             <hr class="linha-divisoria">
             <p>Praça Roberto Mange, R. Santa Rosália, 30, Sorocaba - SP, 18090-110</p>
             <p>Copyright © 2025 Jardim da Diana - Todos os direitos reservados.</p>
-            <img class="logo-empresa" src="src/logosemfundo.png" alt="Logo Empresa">
+            <img class="logo-empresa" src="../../../static/frontend/src/logosemfundo.png" alt="Logo Empresa">
         </div>
 
         <div class="footer-right">
             <p class="escrita-forma">Formas de Pagamento</p>
-            <img class="pagamento" src="src/formadepagamento.png" alt="Pagamento">
+            <img class="pagamento" src="../../../static/frontend/src/formadepagamento.png" alt="Pagamento">
         </div>
     </footer>
 

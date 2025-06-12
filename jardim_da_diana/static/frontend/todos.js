@@ -12,6 +12,13 @@ function fetchProdutos(){
         .catch(err => console.error("Erro ao buscar Produtos", err));
 }
 
+function showMenu() {
+    document.getElementById("dropdown").style.display = "flex";
+}
+function hideMenu() {
+    document.getElementById("dropdown").style.display = "none";
+}
+
 function renderTodosProdutos(produtos){
     const params = new URLSearchParams(window.location.search);
     const categoria = params.get("categoria");
@@ -27,9 +34,10 @@ function renderTodosProdutos(produtos){
             
             card.innerHTML = `
                 <div class="produto-completo">
-                    <img src="${produto.imagem}" alt="${produto.nome}" />
-                    <h1>${produto.nome}</h1>
-                    <p class="preco">R$ ${produto.preco}</p>
+                    <a href="./descricao.html?id=${produto.id}">
+                        <img src="${produto.imagem}" alt="${produto.nome}" />
+                        <h1>${produto.nome}</h1>
+                        <p class="descricao">${produto.descricao}</p> <p class="preco">R$ ${parseFloat(produto.preco).toFixed(2).replace('.', ',')}</p> </a>
                 </div>
             `;
             todosContainer.appendChild(card);

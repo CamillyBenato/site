@@ -1,164 +1,188 @@
-/* sacola.css */
-
-.sacola-content {
-    background-color: #f5f5f5;
-    padding: 30px 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 900px; /* Largura máxima para centralizar */
-    margin-left: auto;
-    margin-right: auto;
+.sacola-main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7f0e6;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.sacola-content h1 {
+.sacola-main h1 {
+    font-size: 32px;
+    color: #F2B11D;
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 2.2em;
-}
-
-.itens-sacola-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     margin-bottom: 30px;
 }
 
-.sacola-item-card {
-    background-color: #eee4d5; /* Cor similar à imagem */
-    border-radius: 8px;
-    padding: 15px 20px;
+.sacola-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
-.sacola-produto-info {
-    display: flex;
-    align-items: center;
-    flex: 2; /* Ocupa mais espaço para o produto */
+.itens-sacola {
+    flex: 2; /* Ocupa mais espaço */
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-.sacola-imagem-produto {
-    width: 100px; /* Ajuste o tamanho conforme a imagem */
+.item-sacola {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.item-sacola:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item-sacola img {
+    width: 100px;
     height: 100px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-right: 20px;
-    border: 1px solid #ccc;
 }
 
-.sacola-texto-info h3 {
-    margin: 0;
-    font-size: 1.1em;
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
     color: #333;
 }
 
-.sacola-texto-info p {
-    margin: 5px 0;
-    font-size: 0.9em;
+.item-info p {
+    margin: 0;
+    font-size: 14px;
     color: #666;
 }
 
-.sacola-valor,
-.sacola-quantidade {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1; /* Distribui o espaço entre valor e quantidade */
-}
-
-.sacola-valor span:first-child,
-.sacola-quantidade span:first-child {
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-.preco-item {
-    font-size: 1.2em;
-    color: #000;
-    font-weight: bold;
-}
-
-.quantidade-controls {
+.item-quantidade {
     display: flex;
     align-items: center;
-    gap: 8px;
-    background-color: #fff;
+    margin-left: 20px;
+}
+
+.item-quantidade input {
+    width: 50px;
+    padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 5px;
+    text-align: center;
+    margin: 0 10px;
 }
 
-.quantidade-controls button {
-    background-color: #F2B11D; /* Cor do header */
+.item-quantidade button {
+    background-color: #F2B11D;
     color: white;
     border: none;
-    border-radius: 3px;
-    width: 28px;
-    height: 28px;
-    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
+    font-size: 16px;
 }
 
-.quantidade-controls button:hover {
-    background-color: #e0a000; /* Um pouco mais escuro no hover */
+.item-quantidade button:hover {
+    background-color: #da9f1a;
 }
 
-.quantidade-controls span {
-    font-size: 1.1em;
+.item-preco {
     font-weight: bold;
-    color: #333;
+    color: #80786C;
+    font-size: 18px;
+    margin-left: 20px;
+    width: 100px; /* Garante que o preço tenha espaço */
+    text-align: right;
 }
 
-.sacola-resumo {
+.remover-item {
+    background-color: #dc3545; /* Vermelho para remover */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.remover-item:hover {
+    background-color: #c82333;
+}
+
+.resumo-pedido {
+    flex: 1; /* Ocupa menos espaço */
+    min-width: 280px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.resumo-pedido h2 {
+    font-size: 24px;
+    color: #F2B11D;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.resumo-linha {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #eee4d5; /* Cor similar à imagem */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
 }
 
-.total-area {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.total-area span:first-child {
-    font-size: 1.5em;
+.resumo-linha.total-final {
     font-weight: bold;
+    font-size: 20px;
     color: #333;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
 }
 
-#total-sacola {
-    font-size: 2em;
-    font-weight: bold;
-    color: #000; /* Cor do total da imagem */
-}
-
-.btn-finalizar {
-    background-color: #4CAF50; /* Verde do botão da imagem */
+.finalizar-pedido {
+    background-color: #2e8b57;
     color: white;
-    padding: 12px 25px;
+    padding: 15px 25px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.3em;
+    border-radius: 8px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.btn-finalizar:hover {
-    background-color: #45a049;
+.finalizar-pedido:hover {
+    background-color: #256d46;
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .sacola-container {
+        flex-direction: column;
+    }
+    .itens-sacola, .resumo-pedido {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.valor-frete{
+    color: green;
 }

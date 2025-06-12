@@ -1,3 +1,8 @@
+body {
+    margin: 0px;
+}
+
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,7 +11,7 @@
 }
 
 .header { 
-    display: flex;
+    display: fixed;
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
@@ -14,7 +19,7 @@
     height: 200px;
 }
 
-.header-left
+.header-left,
 .header-center,
 .header-right {
   flex: 1;
@@ -253,4 +258,35 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+.imgPerfil {
+    cursor: pointer;
+    border-right:px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 100%;
+    top: 45px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 160px;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
 }
