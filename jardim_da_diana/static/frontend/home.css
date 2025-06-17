@@ -27,7 +27,7 @@ body {
     scroll-behavior: smooth;
     padding: 0.25px 0px;
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     scrollbar-width: none; /* Oculta a barra de rolagem */
     -ms-overflow-style: none;  
     margin-bottom: 25px;
@@ -91,7 +91,10 @@ h1 {
 h2 {
     font-family: 'Times New Roman', Times, serif;
     color: #A8701A;
-    margin-left: 350px;
+    margin: 40px 0 20px 185px; /* Move o título mais à direita */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
 }
 
 /* MAIS VENDIDOS */
@@ -99,7 +102,7 @@ h2 {
 /*grade responsiva*/
 .produtos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* até 5 por linha */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 80px;
     max-width: 1200px;
     margin: 0 auto;
@@ -153,15 +156,14 @@ h2 {
 
 .imgPerfil {
     cursor: pointer;
-    border-right:px;
+    border-right: px;
 }
 
 .dropdown-menu {
     display: none;
     position: absolute;
-    left: 0;
-    right: 100%;
     top: 45px;
+    right: 0; /* aqui ajusta para abrir à direita */
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -169,6 +171,16 @@ h2 {
     min-width: 160px;
     flex-direction: column;
     padding: 10px 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    z-index: 999;
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown-menu a {
@@ -180,4 +192,41 @@ h2 {
 
 .dropdown-menu a:hover {
     background-color: #f0f0f0;
+}
+
+.add-to-cart-btn,
+.add-to-fav-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 5px auto;
+}
+
+/* Carrinho: marrom escuro */
+.add-to-cart-btn {
+    background-color: #6D3B10;
+    color: white;
+    border: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #256d46;
+}
+
+/* Favorito: borda marrom, fundo claro */
+.add-to-fav-btn {
+    background-color: white;
+    color: #6D3B10;
+    border: 2px solid;
+    font-size: 20px;
+}
+
+.add-to-fav-btn:hover {
+    background-color: #F2B11D;
 }
