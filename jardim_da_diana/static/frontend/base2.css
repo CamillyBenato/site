@@ -214,10 +214,10 @@ body {
     object-fit: contain;
     margin-left: 15px;
     position: absolute; /* posicionamento absoluto */
-    top: 20px;
+    top: -65px;
     cursor: pointer;
     border-right: 15px;
-    right: 80px;
+    right: -550px;
 }
 
 .imgSacola {
@@ -226,8 +226,8 @@ body {
     object-fit: contain;
     margin-left: 15px;
     position: absolute; /* posicionamento absoluto */
-    top: 20px;
-    right: 15px;
+    top: -65px;
+    right: -600px;
 }
 
 .dropdown-menu {
